@@ -4,11 +4,17 @@ define Player = Character("Investigador", color="#ed5f00")
 #Personajes Capitulo2
 define ti = Character("Tiki", color="#5b029c")
 define ta = Character("Taka", color="#5b029c")
+#Karma Settings
+default karma = 0
+screen kamra_bar:
+    text "Karma Total: [karma]"
+
 
 
 label start:
 
      play music "camaróncaramelo.mp3" loop
+     show screen karma_bar
      scene fondo
      
      show quency_neutro with dissolve
@@ -39,4 +45,6 @@ label Capitulo2:
 
      ti "ola"
      ta "demonio"
-
+       
+#Final Malo
+label final_tiki:
