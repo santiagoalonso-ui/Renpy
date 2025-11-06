@@ -1,33 +1,26 @@
-﻿# The script of the game goes in this file.
+﻿#personajes Capitulo1
+define R = Character("rata", color="#c582ff")
+image rata neutral = "images/rata_neutral.png"
+define Player = Character("Tu", color="#074eb8")
+image bg habitacion = "images/habitacion.png"
+define gui.text_font = "fonts/daydream.otf"
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
-
-
-# The game starts here.
 
 label start:
+    scene bg habitacion
+    with fade
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    play music "liminalspace.mp3" loop
+    "Un olor putrido pero familiar inunda tus cavidades nasales"
+    "..."
 
-    scene bg room
+    show rata neutral
+    with dissolve
+    R "soy pobre"
+    R "..."
+    R "Muy... pobre"
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
 
-    show eileen happy
 
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
 
     return
